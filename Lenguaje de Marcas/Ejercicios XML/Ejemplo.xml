@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE raiz  SYSTEM "Ejemplo.dtd">
+<raiz>
+    <table>
+        <tr>
+            <td>Platanos</td>
+            <td>Manzanas</td>
+        </tr>
+        <tr>
+            <tr>Fresas</tr>
+            <tr>Sandias</tr>
+        </tr>
+    </table>
+
+    <table>
+        <name>Mesa aparador IKEA Krögen</name>
+        <color>Negro</color>
+        <material>Nogal</material>
+    </table>
+</raiz>

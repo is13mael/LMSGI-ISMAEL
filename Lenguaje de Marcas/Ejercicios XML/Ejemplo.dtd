@@ -1,0 +1,7 @@
+<!ELEMENT raiz (table+)>
+<!ELEMENT table (tr*,name?,color?,material?)>
+<!ELEMENT tr (#PCDATA|td|tr)*>
+<!ELEMENT td (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT material (#PCDATA)>

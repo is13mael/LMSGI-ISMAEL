@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<banco>
+    <sucursal codigo="001">
+        <nombre>Centro</nombre>
+        <cuenta codigo="CC1001">
+            <cliente>
+                <nombre>Ismael Parra</nombre>
+                <dni>77186728Q</dni>
+            </cliente>
+        </cuenta>
+        <cuenta codigo="CC1002">
+            <cliente>
+                <nombre>Pedro Sánchez</nombre>
+                <dni>77812403N</dni>
+            </cliente>
+        </cuenta>
+    </sucursal>
+    <sucursal codigo="002">
+        <nombre>BBVA</nombre>
+        <cuenta codigo="CC2001">
+            <cliente>
+                <nombre>Mr. Rico</nombre>
+                <dni>28932091M</dni>
+            </cliente>
+        </cuenta>
+    </sucursal>
+</banco>

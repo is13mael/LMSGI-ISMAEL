@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalog xmlns="http://eb.org/catalogo"
+            xmlns:dc="http://purl.org/dc/elementos/1.1/">
+
+    <libro id="1">
+        <dc:title>El Quijote</dc:title>
+        <dc:creator>Miguel de Cervantes</dc:creator>
+        <dc:date>1605</dc:date>
+        <dc:language>es</dc:language>
+        <dc:publisher>Francisco de Robles</dc:publisher>
+    </libro>
+
+    <libro id="2">
+        <dc:title>Cien de años de soledad</dc:title>
+        <dc:creator>Gabriel García Márquez</dc:creator>
+        <dc:date>1967</dc:date>
+        <dc:language>es</dc:language>
+        <dc:publisher>Editorial Sudamericana</dc:publisher>
+    </libro>
+
+    
+</catalog>

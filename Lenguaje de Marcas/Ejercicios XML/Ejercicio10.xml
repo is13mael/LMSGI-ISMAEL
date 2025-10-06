@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<agenda xmlns:dir="http://agenda.com/contactos">
+    <contacto id="1">
+        <nombre>Carlos Ruiz Rubio</nombre>
+        <telefono tipo="móvil">952137255</telefono>
+        <email>carlosruiz@gmail.com</email>
+        <dir:direccion>
+            <dir:calle>Calle Zaragoza 15</dir:calle>
+            <dir:ciudad>Málaga</dir:ciudad>
+            <dir:CodigoPostal>29590</dir:CodigoPostal>
+        </dir:direccion>
+    </contacto>
+
+    <contacto id="2">
+        <nombre>Ismael Parra Moussaif</nombre>
+        <telefono tipo="móvil">644273438</telefono>
+        <email>parramoussaifismael@gmail.com</email>
+        <dir:direccion>
+            <dir:calle>Calle Diego Rapela 18 BJ</dir:calle>
+            <dir:ciudad>Málaga</dir:ciudad>
+            <dir:CodigoPostal>29590</dir:CodigoPostal>
+        </dir:direccion>
+    </contacto>
+</agenda>
