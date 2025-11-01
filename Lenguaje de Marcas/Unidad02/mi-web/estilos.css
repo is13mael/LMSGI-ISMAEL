@@ -1,0 +1,135 @@
+/* Base mínima para empezar */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* El body se convierte en contenedor flexible, dispuesto en columnas y que ocupe todo el alto de la ventana */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* CABECERA con FLEX: 
+    dos zonas: logo+título y menu de navegación
+*/
+.cabecera {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #2C3E50;
+}
+
+/* Logo */
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+/* .titulo {
+    margin: 0;
+    color: #2C3E50;
+} */
+
+/* Menú horizontal con flex */
+.menu {
+    list-style: none;   /* Eliminamos las viñetas */
+    display: flex;      /* Colocamos los elementos en fila */
+    gap: 1rem;          /* Espacio entre los ítems/enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo básico de los enlaces del menú */
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Pseudoclase hover: cambiamos el estilo al situar el cursor */
+.menu a:hover {
+    color: #E74C3C;
+}
+/* .menu li {
+    display: inline-block;
+} */
+
+#contenido-principal {
+    padding: 1rem;
+    flex-grow: 1;       /* Aplicamos factor de crecimiento para "empujar" al footer */
+}
+
+.tarjeta {
+    background: #fff;
+    border-radius: 10px;
+    width: min(900px, 95%);
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ddd;
+}
+
+/* Listas y layout simple */
+.listas {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.lista {
+    padding-left: 20px;
+}
+
+.lista li {
+    margin: 0.25rem 0;
+}
+
+/* Tabla:
+    - width: ocupa todo el ancho 
+    - border-collapse: une los bordes
+*/
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+/* Celdas: bordes y relleno */
+.tabla td, .tabla th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Cabecera de la tabla de forma diferente */
+.tabla th {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+/* Celdas de cuerpo de tabla diferentes */
+.table td {
+    text-align: left;
+    white-space: nowrap;        /* Evita saltos de línea en las celdas */
+}
+
+.pie {
+    text-align: center;
+    padding: 1rem;
+    color: #7f8c8d;
+    font-size: 14px;
+    background: #2C3E50;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de registro de Gamezone">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Guías</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+        <section class="tarjeta">
+            <h2>Crear cuenta en GameZone</h2>
+            <p>
+                Unete a nuestra comunidad para disfrutar de contenido exclusivo,
+                participar en grandes eventos y obtener descuentazos en nuestros juegos.
+            </p>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Registro de usuario</h2>
+            <form name="register" action="registro.html" method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="name" id="nombre" required>
+                </div>
+
+                <div>
+                    <label for="clave">Contraseña:</label>
+                    <input type="password" name="pass" id="clave" minlength="6" maxlength="12" required>
+                </div>
+
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input type="number" name="age" id="edad" min="0" required>
+                </div>
+
+                <div>
+                    <br>
+                    <label for="dni">DNI:</label>
+                    <input type="text" name="id" id="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
+                    <button type="submit">Registrar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
