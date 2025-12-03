@@ -1,0 +1,495 @@
+/* Base mínima para empezar */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* El body se convierte en contenedor flexible, dispuesto en columnas y que ocupe todo el alto de la ventana */
+body {
+    margin: 0;
+    font-family: "Orbitron", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*  - "Roboto": fuente que hemos traído de Google Fonts 
+        - system-ui -apple-system, etc: fuente del sistema como respaldo 
+        - sans-serif: último recurso si falla lo anterior */
+    color: #333;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* CABECERA con FLEX: 
+    dos zonas: logo+título y menu de navegación
+*/
+.cabecera {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #2C3E50;
+}
+
+/* Logo */
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+/* .titulo {
+    margin: 0;
+    color: #2C3E50;
+} */
+
+/* Menú horizontal con flex */
+.menu {
+    list-style: none;   /* Eliminamos las viñetas */
+    display: flex;      /* Colocamos los elementos en fila */
+    gap: 1rem;          /* Espacio entre los ítems/enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo básico de los enlaces del menú */
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Pseudoclase hover: cambiamos el estilo al situar el cursor */
+.menu a:hover {
+    color: #E74C3C;
+}
+/* .menu li {
+    display: inline-block;
+} */
+
+/* Enlace activo del menú para indicar la página actual */
+.menu a.activo {
+    color:#E74C3C;
+    border-bottom: 2px solid #E74C3C;
+    padding-bottom: 0.2rem;
+}
+
+#contenido-principal {
+    padding: 1rem;
+    flex-grow: 1;       /* Aplicamos factor de crecimiento para "empujar" al footer */
+}
+
+.tarjeta {
+    background: #fff;
+    border-radius: 10px;
+    width: min(900px, 95%);
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ddd;
+}
+
+/* Listas y layout simple */
+.listas {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.lista {
+    padding-left: 20px;
+}
+
+.lista li {
+    margin: 0.25rem 0;
+}
+
+/* Tabla:
+    - width: ocupa todo el ancho 
+    - border-collapse: une los bordes
+*/
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+/* Celdas: bordes y relleno */
+.tabla td, .tabla th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Cabecera de la tabla de forma diferente */
+.tabla th {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+/* Celdas de cuerpo de tabla diferentes */
+.table td {
+    text-align: left;
+    white-space: nowrap;        /* Evita saltos de línea en las celdas */
+}
+
+.pie {
+    text-align: center;
+    padding: 1rem;
+    color: #7f8c8d;
+    font-size: 14px;
+    background: #2C3E50;
+}
+
+/* === FORMULARIO REGISTRO === */
+.form-registro {
+    background-color: #fff;
+    border: 4px solid darkgoldenrod;
+    border-radius: 7px;
+    padding: 1rem;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: firebrick;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 1rem;
+}
+
+.form-row label {
+    font-weight: bold;
+}
+
+.form-row input {
+    padding: 0.5rem;
+}
+
+.form-row input[type="submit"]{
+    background-color: firebrick;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.form-row input[type="submit"]:hover {
+    background-color: darkred;
+}
+
+/* =====================================
+   SECCION TIENDA
+   ===================================== */
+/* Para mayor especificidad, aplico las dos clases a la vez */
+/* Explicación:  
+   - La función min() elige el menor valor entre 1200px y el 95% del ancho disponible 
+   - Así, en pantallas pequeñas ocupará el 95%, y en pantallas grandes nunca superará los 1200px
+   - Esto es equivalente a poner las propiedades
+        width: 95%;
+        max-width: 1200px;
+    Aplicamos además estos estilos a los elementos que tengan ambas clases: tienda y tarjeta.
+    Esto lo hacemos porque queremos aplicar un estilo general de .tarjeta (para las secciones normales del sitio)
+    y como queremos modificar solo esta sección concreta, sin cambiar las demás, usamos las dos clases.
+        */
+.tarjeta.tienda {
+    width: min(1200px, 95%);
+}
+
+/* Contenedor de las cards */
+.lista-cards--flex {
+    display: flex;        /* activa el modelo Flex */
+    flex-wrap: wrap;      /* permite que las cards salten de línea si no caben */
+    gap: 16px;            /* espacio uniforme entre ellas */
+    justify-content: center; /* centra horizontalmente todas las cards */
+  }
+  
+  /* Card individual */
+  .card {
+    width: 100%;            /* Se adapte al ancho de la celda del grid */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+  }
+  p {
+    font-family: "Jersey 10", Courier, monospace;
+  }
+  
+  /* Imagen dentro de la card */
+  .card-imagen {
+    width: 100%;            /* ocupa todo el ancho disponible dentro de la card */
+    height: 180px;          /* altura fija para todas las imágenes */
+    object-fit: contain;      /* ajusta la imagen sin recortarla */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  /*
+     Explicación:
+     - object-fit: contain → asegura que la imagen se vea completa aunque tenga proporciones diferentes.
+     - Así evitamos deformaciones o recortes.
+  */
+  
+  /* Textos */
+  .card-titulo {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 8px 0 4px;
+  }
+  .card-descripcion {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 3.5em; /* mantiene altura uniforme aunque cambie el texto */
+  }
+  .card-precio {
+    color: #b60000;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+  
+  /* Botón */
+  .card-boton {
+    display: inline-block;              /* Puede tener ancho, alto, padding, bordes y fondo y NO SALTA DE LÍNEA */
+    /* display: inline; */            /* No puedo definir ancho, alto, ni margenes... y NO SALTA DE LÍNEA*/
+    padding: 10px 16px;
+    background-color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+/* ==================================
+   SECCION GRID: Introducción visual
+   ==================================
+*/
+
+.parent {
+    height: 700px;
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-rows: 100px 1fr 60px;
+    gap: 10px;
+    grid-template-areas:
+    "header     header  header"
+    "nav        main    aside"
+    "footer     footer  footer"
+}
+
+.area-header {
+    background: blue;
+    grid-area: header;
+}
+
+.area-nav {
+    background: aquamarine;
+    grid-area: nav;
+}
+
+.area-main {
+    background: green;
+    grid-area: main;
+}
+
+.area-aside {
+    background: red;
+    grid-area: aside;
+}
+
+.area-footer {
+    background: orange;
+    grid-area: footer;
+}
+
+.contenedor-grid {
+    display: grid;          /* Activar el modo grid */
+    min-height: 300px;
+    /* grid-template-columns: 200px 200px 200px;       3 columnas de anchura fija */
+    grid-template-columns: repeat(2, 100px);
+    /* grid-template-columns: auto 1fr 1fr; */
+    /* grid-template-columns: 1fr auto 1fr; */
+    grid-template-rows: 75px 125px;                /* 2 filas de altura fija */
+    /* grid-template: 100px 100px / 200px 200px 200px;    Atajo de grid-template-rows y grid-template-columns   */
+    
+    
+   
+    row-gap: 5px;
+    column-gap: 25px;
+    /* gap: 5px 25px; */
+    /* gap: 10px;          Separación uniforme entre celdas (grid cell) */
+    background-color: #aeaeae;
+    padding: 10px;
+
+    /* Alineacion dentro de cada celda */
+    /* justify-items: start;
+    align-items: stretch; */
+    /* atajo place-items = align-items + justify-items */
+    place-items: stretch;
+
+    /* Alineación de la cuadrícula respecto a su contenedor padre */
+    justify-content: end;
+    align-content: end;
+    /* Atajo place-content = align-content + justify-content */
+    place-content: end center;
+}
+
+.item-4 {
+    order: 1;
+}
+.item-2 {
+    /* justify-self: center;
+    align-self: end; */
+    /* Atajo place-self = align-self + justify-self */
+    place-self: end center;
+    order: -1;
+}
+
+.item-grid { background: indianred;}
+.contenedor-grid :nth-child(1) { background-color: #b60000; }
+.contenedor-grid :nth-child(2) { background-color: aquamarine; }
+.contenedor-grid :nth-child(3) { background-color: yellowgreen; }
+.contenedor-grid :nth-child(4) { background-color: goldenrod; }
+.contenedor-grid :nth-child(5) { background-color: greenyellow; }
+.contenedor-grid :nth-child(6) { background-color: olivedrab; }
+
+/* ==================================
+   SECCION JUEGOS: Continuación grid
+   ==================================
+*/
+.tarjeta.juegos {
+    width: min(500px, 95%);
+}
+
+.lista-cards--grid {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: minmax(200px, 1fr);          /* MOBILE FIRST */
+    /* minmax(220px, 1fr):
+       - MINIMO: 220 px de ancho
+       - Si hay espacio disponible, se reparte (1fr) y se estira */
+    /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
+    /* auto-fill: intentar llenar la fila con el máximo número de cards 
+                  incluso si no hay suficientes cards, reserva huecos */
+
+    /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+    /* auto-fit:  colapsa los huecos vacíos si los hay
+                  las cards que haya se estiran para rellenar el espacio */
+    gap: 16px;
+}
+
+.card-destacada {
+    /* desde donde caigas, ocupa 2 columnas cuando existan 2+ columnas */
+    /* grid-column: span 2; */
+    background-color: #52889e;
+    border: 2px solid rgb(190, 180, 63);
+}
+
+/* ==================================
+   SECCION GUIAS
+   ==================================
+*/
+.guias h1 {
+    margin-top: 0;
+}
+
+.guias-videos {
+    margin-top: 2rem;
+}
+
+.guias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Cada guía individual */
+.guia-video h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Ajuste de los iframe */
+.guia-video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ==================================
+   SECCION CONTACTO
+   ==================================
+*/
+.contacto-ubicacion {
+    margin-top: 2rem;
+}
+
+.mapa-contenedor {
+    margin-top: 1rem;
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border: 0;
+    border-radius: 8px;
+    /* Centramos horizontalmente */
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* MEDIA QUERIES para otros dispositivos */
+/* TABLET (aprox 768px - 1023px) */
+@media screen and (768px <= width < 1024px) {
+    .tarjeta.juegos {
+        width: min(1000px, 95%);
+    }
+
+    /* 2 columnas de juegos en tablet */
+    .lista-cards--grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    #contenido-principal {
+        padding-inline: 1.5rem;     /* Algo más de "aire" en los laterales */
+    }
+
+    .card-destacada {
+        grid-column: span 2;
+    }
+}
+
+/* ESCRITORIO (a partir de 1024px) */
+@media screen and (width >= 1024px) {
+    .tarjeta.juegos {
+        width: min(1200px, 95%);
+    }
+
+    /* Catálogo tipo tienda con columnas variables: 
+        - auto-fit: colapsa huecos vacíos */
+    .lista-cards--grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    #contenido-principal {
+        padding-inline: 2rem;     /* Algo más de "aire" en los laterales */
+    }
+
+    .card-destacada {
+        grid-column: span 2;
+    }
+}
