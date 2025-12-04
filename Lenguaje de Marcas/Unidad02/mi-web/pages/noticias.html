@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css">
+    <title>GameZone</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="brand">
+            <img class="logo" src="../imagenes/gamezone-logo.png" alt="Logo de GameZone">
+        </div>
+
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="noticias.html" class="activo">Noticias</a></li>
+                <li><a href="guias.html">Guías</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+        <section class="tarjeta">
+            <div class="video-card">
+                <h2>Reproducción de vídeo local</h2>
+                <video src="../video/billgates.mp4" autoplay loop controls muted poster="../imagenes/bill_gates.jpg">
+                    Tu ordenador no soporta el elemento <code>video</code>.
+                </video>
+                <p>Bill Gates haciendo amigos</p>
+            </div>
+
+            <div class="video-card">
+                <h2>Reproducción de video en streaming</h2>
+                <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" controls autoplay muted>
+                    Tu video no soporta el elemento <code>video</code>.
+                </video>
+                <p>Vídeo en Streaming que se reproduce automáticamente</p>
+            </div>
+
+            <div class="video-card">
+                <h2>Vídeo de Youtube</h2>
+                <iframe 
+                src="https://www.youtube.com/watch?v=Q123YDN4tKE" 
+                title="El podcast de Mariano de Aquí no hay quien viva" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+                </iframe>
+                <p>El podcast de Mariano en Aquí no hay quien viva</p>
+            </div>
+
+            <div class="audio-card">
+                <h2>Reproducción de audio local</h2>
+                <audio src="../audio/Unidad02_ejemplos de clase_gamezone_audio_SuperMarioBros.mp3" controls autoplay>
+                    Tu navgador no soporta el elemento <code>audio</code>.
+                </audio>
+                <p>Super Mario Bros</p>
+            </div>
+
+            <div class="audio-card">
+                <h2>Reproducción de audio en Streaming</h2>
+                <audio src="../audio/Unidad02_ejemplos de clase_gamezone_audio_Link's_Awakening_DX-02-Title_Screen.mp3" controls>
+                    Tu navegador no soporta el elemento <code>audio</code>.
+                </audio>
+                <p>Audio en Streaming - SoundHelix-Song-1</p>
+            </div>
+
+            <div class="audio-card">
+                <h2>
+                    Reproducción de audio en Streaming - Radio Paradise (una emisora que
+                    ofrece una mezcla de rock, pop y otros géneros)
+                </h2>
+                <audio src="http://stream.radioparadise.com/mp3-192" controls>
+                    Tu navegador no soporta el elemento <code>audio</code>.
+                </audio>
+                <p>Radio Paradise</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

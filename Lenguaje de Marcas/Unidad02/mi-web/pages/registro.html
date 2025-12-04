@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de videojuegos">
+    <link rel="stylesheet" href="../estilos.css">
+    <title>GameZone</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="brand">
+            <img class="logo" src="../imagenes/gamezone-logo.png" alt="Logo de GameZone">
+        </div>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="guias.html">Guías</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html" class="activo">Registro</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main id="contenido-principal">
+        <section class="tarjeta">
+            <h2>Registro de usuario</h2>
+
+            <form name="register" action="registro.php" method="post" class="form-registro">
+                <fieldset>
+                    <legend>Datos de registro</legend>
+                    <div class="form-row">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="name" id="nombre" placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="correo">Email:</label>
+                        <input type="email" name="correo" id="correo" placeholder="ejemplo@gmail.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="clave">Contraseña:</label>
+                        <input type="password" name="pass" id="clave" minlength="6" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="edad">Edad:</label>
+                        <input type="number" name="age" id="edad" min="0" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="dni">DNI/NIE:</label>
+                        <input type="text" name="id" id="dni" pattern="([X-Zx-z][0-9])[0-9]{7}[A-Za-z]" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="submit" value="Registrar">
+                        <input type="reset" value="Restablecer">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
