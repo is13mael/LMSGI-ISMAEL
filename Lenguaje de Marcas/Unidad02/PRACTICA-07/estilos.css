@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.cabecera {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.logo-youtube {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-youtube img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+}
+
+.buscador input {
+    padding: 5px;
+    font-size: 1em;
+    width: 300px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+}
+
+.buscador button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background-color: #f1f1f1;
+    border-color: #bbb;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.listas {
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.listas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.listas li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.listas li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+.listas li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.videos {
+    padding: 20px;
+    flex: 1;
+    width: 80%;
+}
+
+.video-card,
+.audio-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.video-card h2,
+.audio-card h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #444;
+
+}
+
+video,
+audio {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+}
+
+.pie {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+.pie a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+.buscador button img {
+    width: 20px;
+    height: 20px;
+}

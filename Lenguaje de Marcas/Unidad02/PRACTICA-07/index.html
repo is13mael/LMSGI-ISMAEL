@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ismael Parra Moussaif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTube</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="logo-youtube">
+            <img src="imagenes/youtube.svg" alt="Logo Youtube">
+            <h1>MyTube</h1>
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar...">
+
+            <button>
+                <img src="imagenes/search.svg" alt="Buscador">
+            </button>
+
+        </div>
+    </header>
+
+    <main id="menu">
+        <nav class="listas">
+            <ul>
+                <li><img src="imagenes/home.svg" alt="Inicio">Inicio</li>
+                <li><img src="imagenes/trending-up.svg" alt="Tendencias">Tendencias</li>
+                <li><img src="imagenes/dollar-sign.svg" alt="Suscripcion">Suscripciones</li>
+                <li><img src="imagenes/book.svg" alt="Biblioteca">Biblioteca</li>
+                <li><img src="imagenes/thumbs-up.svg" alt="Likes">Vídeos que me gustan</li>
+            </ul>
+        </nav>
+
+        <section class="videos">
+            <div class="video-card">
+                <h2>Reproducción de vídeo local</h2>
+                <video controls src="video/LinusTorvaldsNvidia.mp4" poster="imagenes/poster.jpg">
+                    Tu navegador no soporta este vídeo.
+                </video>
+                <p>Linus Torvalds haciendo amigos</p>
+            </div>
+
+            <div class="video-card">
+                <h2>Reproducción de vídeo en Streaming</h2>
+                <video controls autoplay muted
+                    src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4">
+                </video>
+                <p>Video en Streaming que se reproduce automaticamente</p>
+            </div>
+
+            <div class="video-card">
+                <h2>Vídeo de YouTube</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Q123YDN4tKE?si=tAcy-jbjr99vukwj"
+                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <p>El podcast de Mariano en Aquí no hay quien viva</p>
+            </div>
+
+            <div class="audio-card">
+                <h2>Reproducción de audio local</h2>
+                <audio src="audio/Ramones - Spider-Man.mp3" controls></audio>
+                <p>Ramones - Spider-Man</p>
+            </div>
+
+            <div class="audio-card">
+                <h2>Reproducción de audio en Streaming</h2>
+                <audio src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls></audio>
+                <p>Audio en Streaming - SoundHelix-Song-1</p>
+            </div>
+
+            <div class="audio-card">
+                <h2>Reproducción de audio en Streaming - Radio Paradise (una emisora que ofrece una mezcla de rock, pop
+                    y otros géneros)</h2>
+                <audio src="http://stream.radioparadise.com/mp3-192" controls></audio>
+                <p>Radio Paradise</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2025 MyTube. Todos los derechos reservados</p>
+        <div class="footer-enlaces">
+            <a href="#">Facebook</a> |
+            <a href="#"> Twitter</a> |
+            <a href="#"> Instagram</a> |
+            <a href="#"> Contacto</a>
+        </div>
+    </footer>
+</body>
+
+</html>
