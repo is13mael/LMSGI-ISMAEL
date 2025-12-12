@@ -1,0 +1,6 @@
+<!ELEMENT inventario (item+)>
+<!ELEMENT item (nombre, precio, stock)>
+<!ATTLIST item sku CDATA #REQUIRED moneda (EUR|USD) #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT stock (#PCDATA)>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>Capital de Francia</text>
+        </name>
+        <questiontext format="html">
+            <text>¿Cuál de las siguientes ciudades es la capital de Francia?</text>
+        </questiontext>
+
+        <defaultgrade>1.00000000</defaultgrade>
+        <single>true</single>
+        <shuffleanswers>1</shuffleanswers>
+        <answernumbering>abc</answernumbering>
+
+        <answer fraction="100" format="html">
+            <text>París</text>
+        </answer>
+
+        <answer fraction="0" format="html">
+            <text>Berlín</text>
+        </answer>
+    </question>
+
+     <question type="truefalse">
+        <name>
+            <text>El sol gira alrededor de la Tierra</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>La afirmación "El Sol gira alrededor de la Tierra" es verdadera.</p>]]></text>
+        </questiontext>
+        <defaultgrade>1.0000000</defaultgrade>
+
+        <answer fraction="100" format="html">
+            <text>false</text>
+        </answer>
+
+        <answer fraction="0" format="html">
+            <text>true</text>
+        </answer>
+    </question>
+</quiz>

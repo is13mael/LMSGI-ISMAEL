@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inventario SYSTEM "inventario.dtd">
+
+<inventario>
+    <item sku="A123" moneda="EUR">
+        <nombre>Teclado Mecánico</nombre>
+        <precio>99.99</precio>
+        <stock>50</stock>
+    </item>
+
+    <item sku="B456" moneda="USD">
+        <nombre>Ratón Inalámbrico</nombre>
+        <precio>45.50</precio>
+        <stock>120</stock>
+    </item>
+
+    <item sku="C789" moneda="EUR">
+        <nombre>Monitor 4K</nombre>
+        <precio>350.00</precio>
+        <stock>30</stock>
+    </item>
+</inventario>

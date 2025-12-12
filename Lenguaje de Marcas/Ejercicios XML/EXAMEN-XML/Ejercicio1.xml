@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <libro id="1">
+        <titulo>La metamorfosis</titulo>
+        <autor>Kafka</autor>
+        <detalles>
+            <editorial>I&amp;D Ediciones</editorial>
+            <precio>9.95</precio>
+            <stock unidades="5"></stock>
+        </detalles>
+    </libro>
+    <libro id="2">
+        <titulo>Rayuela</titulo>
+        <autor>Cortázar</autor>
+        <detalles>
+            <editorial>Alfaguara</editorial>
+            <precio>19.95</precio>
+        </detalles>
+    </libro>
+    <resumen>TOTAL: 2 libros</resumen>
+</catalogo>
