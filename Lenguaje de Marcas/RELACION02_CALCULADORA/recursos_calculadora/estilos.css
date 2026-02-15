@@ -1,0 +1,239 @@
+@font-face {
+    font-family: "Segment7Standard";
+    src: url("./fonts/Segment7Standard.otf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /************************/
+  /* Estilos para el body */
+  /************************/
+  
+  body {
+    background: #f0fff0;
+    font-family: 'Segment7Standard', monospace;
+    min-height: 100vh;                  /* Asegura que la altura mínima de la página sea la del viewport (pantalla) */
+    margin: 0;                          /* Elimina el margen por defecto de todos los elementos */
+    padding: 0;
+    box-sizing: border-box;             /* Asegura que el padding y los bordes no aumenten el ancho/alto total del elemento */
+    display: flex;                      /* Utiliza Flexbox para alinear los elementos de la lista en una fila */
+    flex-direction: column;             /* Alinea los hijos (cabecera, navegación, etc.) verticalmente */
+  }
+  
+  /************************/
+  /* Estilos para el main */
+  /************************/
+  
+  main {
+    flex: 1;                    /* Hace que el contenido de la etiqueta main crezca para llenar el espacio disponible ¡¡¡IMPORTANTE!!!*/
+    display: flex;              /* Utiliza Flexbox para alinear los elementos de la lista en una fila */
+    justify-content: center;    /* Añadido: Centra los elementos */    
+    align-items: center;        /* Añadido: Alinea los elementos al centro verticalmente */
+  }
+  
+  /****************************/
+  /* Estilos para la cabecera */
+  /****************************/
+  
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .titulo-calculadora {
+    font-family: 'Segment7Standard', monospace;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;        /* Añadido: Separación horizontal entre letras */
+  } 
+  
+  /********************************************/
+  /* Estilos del contenedor de la calculadora */
+  /********************************************/
+  
+  .contenedor-calculadora {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 20px;      /*Errata en el enunciado*/
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 320px;
+  }
+  
+  /***************************************************************************/
+  /* Estilos de la pantalla de la calculadora. Donde aparecen los resultados */
+  /***************************************************************************/
+  
+  .pantalla {
+    background: #000;
+    font-family: 'Segment7Standard', monospace;
+    font-size: 2.5rem;
+    padding: 15px;
+    border-radius: 10px;      /* Errata en el enunciado */
+    height: 70px;
+    margin-bottom: 20px;
+    text-align: right;        /* Añadido */
+    box-sizing: border-box;   /* Asegura que el padding y los bordes no aumenten el ancho/alto total del elemento */
+  }
+  
+  /***************************************************************/
+  /* Estilos para el contenedor de los botones de la calculadora */
+  /***************************************************************/
+  
+  .contenedor-botonera {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  
+  /***********************************/
+  /* Estilos generales para un botón */
+  /***********************************/
+  
+  .boton {
+    background: #2d2d2d;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 18px;
+    border-radius: 10px;      /* Errata en el enunciado */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .boton:hover {
+    background: #3a3a3a;
+  }
+  
+  /********************************************/
+  /* Estilos para los botones dobles (CE y 0) */
+  /********************************************/
+  
+  .doble {
+    grid-column: span 2;
+  }
+  
+  
+  /*****************************************************************************************************/
+  /* Estilos para los botones de control y función inmediata: */
+  /* inverso, cuadrado, raíz, borrar todo, borrar y retroceso */
+  /*****************************************************************************************************/
+  
+  .control, .inmediata {
+    background: #3b3b3b;
+  }
+  
+  /********************************************************************************/
+  /* Estilos para los bot/********************************************************************************/
+/* Estilos para los botones de operadores: sumar, restar, multiplicar y dividir */
+/********************************************************************************/
+.operacion {
+    background: #4b4bff;
+  }
+  
+  /*******************************/
+  /* Estilos para el botón igual */
+  /*******************************/
+  
+  .igual {
+    background: #ff9500;
+  }
+  
+  /************************************************************/
+  /* Estilo para el botón del punto cuando está deshabilitado */
+  /************************************************************/
+  
+  .deshabilitado {
+    background: #1e1e1e;
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  
+  /******************************************/
+  /* Estilos para los colores por operación */
+  /******************************************/
+  .color-normal {
+    color: white;
+  }
+  
+  .color-error {
+    color: red;
+  }
+  
+  .color-suma {
+    color: #4bff4b;
+  }
+  
+  .color-resta {
+    color: #ff884b;
+  }
+  
+  .color-multiplicacion {
+    color: #ffbf00;
+  }
+  
+  .color-division {
+    color: #00c8ff;
+  }
+  
+  .color-inverso {
+    color: #b084ff;
+  }
+  
+  .color-cuadrado {
+    color: #ff4bd8;
+  }
+  
+  .color-raiz {
+    color: #00ffbf;
+  }
+  
+  /************************************************/
+  /* Estilos para los botones con imagen de fondo */
+  /************************************************/
+  
+  #inversa {
+    /* Configuración para la imagen de fondo del botón */
+    background-image: url(./imagenes/icon_1_over_x_white_normal.svg);  /* Imagen de fondo del botón */
+    background-size: 50px;                              /* Ajusta correctamente el tamaño */
+    background-repeat: no-repeat;                       /* Hace que la imagen de fondo no se repita */
+    background-position: center center;                 /* Centrado horizontal y vertical */
+  }
+  
+  #cuadrado {
+    /* Configuración para la imagen de fondo del botón */
+    background-image: url(imagenes/icon_x_squared_white_normal.svg);  /* Imagen de fondo del botón */
+    background-size: 50px;                              /* Ajusta correctamente el tamaño */
+    background-repeat: no-repeat;                       /* Hace que la imagen de fondo no se repita */
+    background-position: center center;                 /* Centrado horizontal y vertical */
+  }
+  
+  #raiz {
+    /* Configuración para la imagen de fondo del botón */
+    background-image: url(imagenes/icon_square_root_white_normal.svg);  /* Imagen de fondo del botón */
+    background-size: 50px;                              /* Ajusta correctamente el tamaño */
+    background-repeat: no-repeat;                       /* Hace que la imagen de fondo no se repita */
+    background-position: center center;                 /* Centrado horizontal y vertical */
+  }
+  
+  /*********************************/
+  /* Estilos para el pie de página */
+  /*********************************/
+  footer {
+    background: #f0fff0;
+    color: #3d6b5d;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;    /*Errata en el enunciado*/
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  footer .autor {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;   /* Añadido */
+  }
