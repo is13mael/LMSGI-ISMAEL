@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/spock-hand-gesture.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Piedra, Papel, Tijera, Lagarto, Spock</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-juego">PIEDRA · PAPEL · TIJERA · LAGARTO · SPOCK</h1>
+        <h2 class="subtitulo-juego">El Juego definitivo</h2>
+    </header>
+
+    <main>
+        <div class="paneles-arriba">
+            <section class="panel-seleccion-jugada">
+                <h2>Elige jugada</h2>
+                <div class="contenedor-elecciones-juego">
+                    <button class="boton-eleccion-jugada">
+                        <p class="icono-jugada">🪨</p>
+                        <p class="text">Piedra</p>
+                    </button>
+                    <button class="boton-eleccion-jugada">
+                        <p class="icono-jugada">📋</p>
+                        <p class="text">Papel</p>
+                    </button>
+                    <button class="boton-eleccion-jugada">
+                        <p class="icono-jugada">✂️</p>
+                        <p class="text">Tijera</p>
+                    </button>
+                    <button class="boton-eleccion-jugada">
+                        <p class="icono-jugada">🦎</p>
+                        <p class="text">Lagarto</p>
+                    </button>
+                    <button class="boton-eleccion-jugada">
+                        <p class="icono-jugada">🖖</p>
+                        <p class="text">Spock</p>
+                    </button>
+                </div>
+            </section>
+            <section class="panel-batalla">
+                <h2>Batalla</h2>
+                <div class="contenedor-jugadores">
+                    <div class="jugador">
+                        <h3 class="etiqueta-jugador">Tú</h3>
+                        <div class="mostrar-jugada placeholder display-jugador">?</div>
+                    </div>
+                    <div class="vs-circle">VS</div>
+                    <div class="jugador">
+                        <h3 class="etiqueta-jugador">CPU</h3>
+                        <div class="mostrar-jugada placeholder display-jugador">?</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="paneles-abajo">
+            <section class="contenedor-resultado">
+                <div class="resultados">
+                    <div class="mensaje-resultado">Estadísticas del Juego</div>
+                    <div class="estadisticas-juego">
+                        <div class="panel-estadistica">
+                            <span class="valor-estadistica" id="contador-victorias">0</span>
+                            <span class="etiqueta-estadisitca">Victorias</span>
+                        </div>
+                        <div class="panel-estadistica">
+                            <span class="valor-estadistica" id="contador-derrotas">0</span>
+                            <span class="etiqueta-estadisitca">Derrotas</span>
+                        </div>
+                        <div class="panel-estadistica">
+                            <span class="valor-estadistica" id="contador-empates">0</span>
+                            <span class="etiqueta-estadisitca">Emaptes</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>Proyecto evaluación RA 03 - Lenguajes de marcas y sistemas de gestión    de información</p>
+            <p>Proyecto realizado por: 👉Ismael Parra Moussaif👈 (Declaro que no he usado IA en el proyecto)</p>
+        </footer>
+    </main>
+    <script src="js/javascript.js"></script>
+</body>
+</html>
