@@ -1,0 +1,247 @@
+body{
+    font-family: 'Arial', sans-serif;
+    background: #1a1a2e;
+    color: #ffffff;
+    min-height: 100%;
+}
+
+header{
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    font-size: 1.8rem;
+    color: #ff6b6b;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+    padding:  1rem;
+    border-radius: 23px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover, .active{
+    background: #ff6b6b;
+    transform: scale(1.05);
+}
+
+main{
+    flex: 1;
+    max-width: 100%;
+    margin: 2rem auto 4rem auto;
+    padding: 0 2rem;
+}
+
+.buscador{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.buscador h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ff6b6b;
+}
+
+.buscador input{
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    outline: none; /*Con eso quitaría borde feo*/
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    margin-right: 1rem;
+}
+
+.buscador input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#btn-Buscar{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: #ff6b6b;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ff6b6b;
+}
+
+#btn-Buscar:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff6b6b, 0 0 40px #ff6b6b;
+}
+
+.controles{
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+}
+
+#btn-Populares{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: #4ecdc4;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+#btn-Trending{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: #ff6b6b;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+#btn-Populares:hover, #btn-Trending:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.resultados-grid{
+    display: grid;
+    background: rgba(255, 255, 255, 0.08);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pelicula-card{
+    transition: transform 0.3s ease;
+}
+
+.pelicula-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pelicula-card img{
+    width: 100%;
+    height: 340px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.no-imagen{
+    width: 100%;
+    height: 340px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pelicula-card h3{
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.pelicula-card p{
+    color: #dcdcdc;
+    margin-bottom: 0.2rem;
+}
+
+.error{
+    text-align: center;
+    margin-top: 2rem;
+    color: #ffb3b3;
+    font-size: 1rem;
+}
+
+.sobre-mi{
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 3rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-mi h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+}
+
+.sobre-mi p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+.sobre-mi strong{
+    color: #4ecdc4;
+}
+
+footer{
+    background: rgba(0, 0, 0, 0.9);
+    color: #bbbbbb;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.btn-trailer{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #e50914;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-trailer:hover{
+    background: #b20710;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-trailer:active{
+    transform: scale(1.0);
+}
